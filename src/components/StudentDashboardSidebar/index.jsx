@@ -2,29 +2,19 @@ import React, { useState } from 'react';
 import { Nav } from 'react-bootstrap';
 import { useRouteMatch } from 'react-router-dom';
 
-const StudentDashboardSidebar = () => {
+const DashboardSidebar = () => {
     const { path } = useRouteMatch();
 
     return (
         <div className="dashboard__sidebar">
             <Nav className="flex-column" activeKey={path} >
                 <Nav.Item>
-                    <Nav.Link eventKey="/dashboard" href='/dashboard'>
+                    <Nav.Link eventKey="/student-dashboard" href='/student-dashboard'>
                             My Dashboard
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link eventKey="/dashboard/classroom" href='/dashboard/classroom'>
-                            Classroom
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="/dashboard/schedule" href='/dashboard/schedule'>
-                            Schedule
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey="/dashboard/homework" href="/dashboard/homework">
+                    <Nav.Link eventKey="/student-dashboard/homework" href="/student-dashboard/homework">
                             Home Work
                     </Nav.Link>
                 </Nav.Item>
@@ -38,4 +28,4 @@ const StudentDashboardSidebar = () => {
     )
 }
 
-export default StudentDashboardSidebar;
+export default DashboardSidebar;

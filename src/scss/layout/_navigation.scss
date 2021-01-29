@@ -1,10 +1,14 @@
 .navbar {
-    max-width: 90%;
-    padding-left: 10%;
+    background: #FFF;
     &.transparent {
-        position: absolute;
-        left: 0;
-        z-index: 999;
+
+       @include respond-above(lg) {
+           background: transparent;
+           position: absolute;
+           left: 0;
+           z-index: 999;
+           width: 100%;
+       }
     }
     &.fixed {
         position: fixed;
@@ -16,28 +20,63 @@
     }
 
     .navbar-brand {
-        margin-right: 5rem;
+        margin-right: 2rem;
+        width: 70px;
+        @include respond-above(xl) {
+            margin-right: 5rem;
+        }
     }
 
     .navbar-nav {
         margin-right: 5rem;
         .nav-link {
-            font: normal normal 500 18px/24px Poppins;
+            font-size: 14px;
+            font-weight: 600;
             color: #000000;
-
+            margin: 0 10px;
+            line-height: 1;
+            padding-top: 15px;
+            padding-bottom: 12px;
+            @include respond-below(lg) {
+                text-align: center;
+                margin: 5px 0;
+            }
             &:hover {
                 color: #004E6E;
             }
             &.active {
                 color: #004E6E;
                 border-bottom: 4px solid #004E6E;
+                @include respond-below(lg) {
+                    border-bottom: none;
+                }
             }
         }
     }
     .navbar-action {
-        .btn {
-            font: normal normal 500 18px/24px Poppins;
-            padding: 0.8rem 1.4rem;
+        @include respond-below(lg) {
+            text-align: center;
+            margin: 20px 0;
+        }
+        button {
+            font-size: 13px;
+            font-weight: 600;
+            background: $mainColor;
+            border: 0;
+            border-radius: 4px;
+            color: #FFF;
+            padding: 10px 20px;
+            transition: all 0.25s ease-in-out;
+            &:first-child {
+                color: $mainColor;
+                background: transparent;
+                &:hover {
+                    background: rgba($mainColor, 0.2);
+                }
+            }
+            &:hover {
+                background: #003a52;
+            }
         }
     }
 }

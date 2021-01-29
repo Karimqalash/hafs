@@ -1,8 +1,112 @@
 .pricing {
-    
-    text-align: center;
+    .pricing-table-wrapper {
+        padding: 70px 0 60px;
+    }
+    .pricing-sidemenu {
+        flex: 0 0 145px;
+        @include border-radius(20px 0 0 20px);
+        background: #4385A7;
+        margin-top: 109px;
+        .plan-row {
+            padding: 34px 15px;
+            border-bottom: 1px solid #376D88;
+            &:last-child {
+                border-bottom: 0;
+            }
+            .plan-row-title {
+                color: #fff;
+                font-size: 12px;
+                font-weight: 500;
+                text-align: center;
+                margin-bottom: 4px;
+            }
+            .plan-row-details {
+                font-size: 13px;
+                font-weight: 500;
+                color: #BFE9FF;
+                margin: 0;
+                white-space: nowrap;
+            }
+        }
+    }
+    .pricing-table-details {
+        flex: 0 0 calc(100% - 145px);
+        display: block;
+        overflow: hidden;
+        .plan-col {
+            &:last-child {
+                border-right: 0;
+            }
+            .plan-cells {
+                border-right: 1px solid #004E6E;
+                &.last-plan-cell {
+                    border-radius: 0 20px 20px 0;
+                    overflow: hidden;
+                    border: 0;
+                }
+            }
+            .plan-cell {
+                padding: 38px 0;
+                display: flex;
+                justify-content: center;
+                background: #F9F9F9;
+                &:nth-child(even) {
+                    background: #F3F3F3;
+                }
+            }
+        }
+        .plan-price {
+            padding: 25px;
+            p {
+                text-align: center;
+                font-size: 18px;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: #0CA57B;
+                margin-bottom: 0;
+                line-height: 26px;
+                span {
+                    font-size: 35px;
+                }
+                &.blue-txt {
+                    color: $mainColor;
+                }
+                &.yellow-txt {
+                    color: #F68D04;
+                }
 
-    img {
-        width: 100%;
+            }
+        }
+        .plan-col-price {
+            border-right: 1px solid #E5E5E5;
+            padding-right: 17px;
+            &:last-child{
+                border-right: 0;
+                padding-left: 17px;
+                padding-right: 0;
+            }
+            &> p{
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 1;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &.colored {
+                    font-weight: 500;
+                    color: #4385A7;
+                }
+            }
+        }
+        .subscribe-plan {
+            padding: 25px;
+            text-align: center;
+        }
+    }
+
+    .swiper-button-disabled {
+        display: none;
     }
 }
+

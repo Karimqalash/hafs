@@ -1,0 +1,81 @@
+.ongoing-sessions {
+  padding: 20px 40px 40px;
+  .next-session-alert {
+    background: #FF9900;
+    color: #FFF;
+    text-align: center;
+    font-size: 11px;
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    font-weight: 500;
+  }
+}
+.ongoing-session-list {
+  margin: 0;
+  li {
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.session-item {
+  background: #fff;
+  border: 1px solid #F3F3F3;
+  box-shadow: 0 10px 20px rgba(#BFE9FF, 0.16);
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  .session-btn {
+    display: inline-block;
+    background: #4385A7;
+    padding: 19px 25px;
+    @include border-radius(7px);
+    @include transition();
+    &:hover {
+      background: #004E6E;
+    }
+  }
+  .session-info {
+    display: flex;
+    padding: 6px 12px;
+    align-items: center;
+    .teacher-photo {
+      flex: 0 0 50px;
+      overflow: hidden;
+      @include border-radius(50%);
+    }
+    .session-info-content {
+      padding: 0 21px 0 18px;
+      border-right: 1px solid #D8D8D8;
+      &:last-child{
+        border-right: 0;
+      }
+      .session-subtitle {
+        color: #A5A5A5;
+        font-size: 12px;
+        line-height: 1;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+      .session-title {
+        margin: 0;
+        line-height: 1;
+        font-size: 13px;
+        color: #004E6E;
+        font-weight: 600;
+        &.time {
+          color: #18D28C;
+        }
+        &.coming-soon {
+          font-size: 11px;
+          color: #C87D0B;
+        }
+      }
+    }
+  }
+}

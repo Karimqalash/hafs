@@ -32,3 +32,142 @@
 body {
 	font-family: "Poppins", sans-serif;
 }
+
+.main-hafs-header {
+	background: url("../../img/header-bg-1.jpg") center center no-repeat fixed;
+	background-size: cover;
+	border-radius: 0 0 50px 50px;
+	overflow: hidden;
+	text-align: center;
+	color: #FFF;
+	h1 {
+		font-size: 22px;
+		font-weight: 600;
+	}
+	p {
+		font-size: 13px;
+		font-weight: 500;
+		margin-bottom: 0;
+	}
+	.hafs-header-overlay {
+		background: linear-gradient(180deg, rgba(#FFF, 0.0), $mainColor);
+		position: relative;
+		overflow: hidden;
+		&:before {
+			content: "Plans";
+			position: absolute;
+			bottom: 60px;
+			left: 50%;
+			transform: translateX(-50%);
+			font-size: 200px;
+			font-weight: 600;
+			opacity: 0.06;
+			line-height: 0;
+		}
+	}
+	//img/upper.png
+	&.articles-header {
+		background: url("../../img/articles-bg.jpg") center center no-repeat fixed;
+		background-size: cover;
+		.hafs-header-overlay:before {
+			content: "Articles";
+		}
+	}
+	.hafs-header-content {
+		padding-top: 200px;
+		padding-bottom: 70px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/****************************/
+.homework-list {
+	margin: 0;
+	li {
+		margin-bottom: 11px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.homework-item {
+	background: #fff;
+	border: 1px solid #F3F3F3;
+	box-shadow: 0 10px 20px rgba(#BFE9FF, 0.16);
+	border-radius: 7px;
+	padding: 13px 15px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	.teacher-info {
+		display: flex;
+		align-items: center;
+		.teacher-photo {
+			flex: 0 0 50px;
+			@include border-radius(50%);
+			overflow: hidden;
+		}
+		.info-content {
+			flex: 0 0 calc(100% - 50px);
+			padding-left: 23px;
+		}
+		.homework-name {
+			font-size: 15px;
+			color: #004E6E;
+			font-weight: 600;
+			line-height: 1;
+			margin-bottom: 7px;
+		}
+		.teacher-name {
+			margin: 0;
+			font-size: 11px;
+			font-weight: 500;
+			line-height: 1;
+			span {
+				display: inline-block;
+				color: #A5A5A5;
+				padding-right: 8px;
+			}
+		}
+	}
+	.homework-info {
+		display: flex;
+		align-items: center;
+		.homework-date {
+			font-size: 11px;
+			margin: 0;
+			font-weight: 500;
+			line-height: 1;
+			padding-right: 32px;
+			span {
+				font-weight: 400;
+				color: #A5A5A5;
+				display: inline-block;
+				padding-right: 7px;
+			}
+		}
+		.start-btn {
+			display: block;
+			background: #004E6E;
+			padding: 16px 26px;
+			@include border-radius(7px);
+			color: #fff;
+			font-size: 11px;
+			font-weight: 500;
+			@include transition();
+			&:hover {
+				text-decoration: none;
+				background: #01344a;
+			}
+		}
+	}
+}

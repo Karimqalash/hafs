@@ -19,6 +19,7 @@ import Games from './Games';
 import FindTeacher from './FindTeacher';
 import Contactus from './Contactus';
 import history from './history';
+import StudentDashboard from "./StudentDashboard";
 
 // Create a Router context and <Switch> component to render first matched <Route>
 export default () => {
@@ -27,6 +28,7 @@ export default () => {
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/dashboard" component={Dashboard} />
+                <Route path="/student-dashboard" component={StudentDashboard} />
                 <Route path="/free-session" component={FreeSession} />
                 <Route path="/free-session-done" component={FreeSessionDone} />
                 <Route path="/articles" component={Articles} />

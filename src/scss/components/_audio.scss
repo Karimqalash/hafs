@@ -1,0 +1,77 @@
+.audio-list {
+  .audio-item {
+    margin-bottom: 30px;
+    .audio-track-name {
+      text-align: left;
+      font-size: 14px;
+      font-weight: 600;
+      color: $mainColor;
+      margin-bottom: 8px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.audio-wrapper-item {
+  display: flex;
+
+  .audio-icon-box {
+    height: 76px;
+    width: 76px;
+    flex: 0 0 76px;
+    background: #BFE9FF;
+    border-radius: 8px;
+    margin-right: 16px;
+    text-align: center;
+    line-height: 76px;
+    @include respond-below(lg) {
+      display: none;
+    }
+  }
+
+}
+body .rhap_container {
+  background: #ECF9FF;
+  position: relative;
+  padding: 25px;
+  padding-left: 175px;
+  border-radius: 8px;
+  border: 0;
+  box-shadow: none;
+  .rhap_time {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000;
+  }
+  .rhap_main-controls {
+    position: absolute;
+    left: 25px;
+  }
+  svg , svg path{
+    fill: $mainColor;
+  }
+  .rhap_download-progress, .rhap_volume-bar {
+    background: #BFE9FF;
+    border-radius: 8px;
+  }
+  .rhap_progress-indicator, .rhap_progress-filled, .rhap_volume-indicator {
+    background: $mainColor;
+  }
+  .rhap_progress-section {
+    padding-right: 25px;
+  }
+  .rhap_controls-section {
+    flex: 0 0 100px;
+  }
+  .rhap_additional-controls {
+    display: none;
+    flex: none;
+  }
+  .rhap_main-controls {
+    flex: auto;
+  }
+  .rhap_volume-controls {
+    flex: 0 0 100px;
+  }
+}

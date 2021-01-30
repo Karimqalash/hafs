@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Nav } from 'react-bootstrap';
 import { useRouteMatch } from 'react-router-dom';
 
-const DashboardSidebar = () => {
+const StudentDashboardSidebar = () => {
     const { path } = useRouteMatch();
 
     return (
@@ -38,4 +38,4 @@ const DashboardSidebar = () => {
     )
 }
 
-export default DashboardSidebar;
+export default StudentDashboardSidebar;

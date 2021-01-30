@@ -39,7 +39,7 @@ export default function initStore() {
 
 	const middleware = [...Middleware, logger].filter(Boolean);
 
-	const initialState = {};
+	const initialState = undefined;
 
 	const store = createStore(
 		rootReducer,

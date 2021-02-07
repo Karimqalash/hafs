@@ -32,7 +32,7 @@ const StudentHomeWorkPage = () => (
                                 <span>You can do this home work till </span>
                                 15 , Nov at 1.30 Pm
                             </p>
-                            <a href="#" className="start-btn">Start now</a>
+                            <a href="/student-dashboard/homework/1" className="start-btn">Start now</a>
                         </div>
                     </li>
                     <li className='homework-item'>
@@ -53,7 +53,7 @@ const StudentHomeWorkPage = () => (
                                 <span>You can do this home work till </span>
                                 15 , Nov at 1.30 Pm
                             </p>
-                            <a href="#" className="start-btn">Start now</a>
+                            <a href="/student-dashboard/homework/1" className="start-btn">Start now</a>
                         </div>
                     </li>
                     <li className='homework-item'>
@@ -74,7 +74,7 @@ const StudentHomeWorkPage = () => (
                                 <span>You can do this home work till </span>
                                 15 , Nov at 1.30 Pm
                             </p>
-                            <a href="#" className="start-btn">Start now</a>
+                            <a href="/student-dashboard/homework/1" className="start-btn">Start now</a>
                         </div>
                     </li>
                 </ul>

@@ -113,6 +113,16 @@
             background: #02415B;
         }
     }
+    &.light-primary-btn {
+        border-radius: 5px;
+        background: #4385A7;
+        border: 1px solid #4385A7;
+        color: #FFF;
+        padding: 12px 30px;
+        &:hover {
+            background: $mainColor;
+        }
+    }
     &.trans-main-btn {
         background: #ECF9FF;
         color: $mainColor;

@@ -9,7 +9,8 @@
 
 .dashboard-with-sidebar {
     max-width: 1440px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 70px 0;
     display: flex;
     align-items: flex-start;
     .dashboard-content-page {
@@ -49,16 +50,14 @@
     }
 }
 .dashboard {
-    padding: 3rem;
-    padding-left: 0;
     background: #F3F3F3 0% 0% no-repeat padding-box;
 
     &__sidebar {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border-radius: 0px 8px 8px 0px;
+        width: 18%;
         padding: 1.5rem 0;
         font: normal normal 500 13px/24px Poppins;
-        height: fit-content;
 
         .nav-link {
             color: #000000;

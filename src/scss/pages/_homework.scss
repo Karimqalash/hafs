@@ -208,3 +208,184 @@
     }
   }
 }
+
+
+.st-hw-container {
+  @include respond-below(md) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+.st-single-home-work {
+  background: #FFF;
+  border: 1px solid #F3F3F3;
+  max-width: 1040px !important;
+  margin: auto;
+  @include border-radius(10px);
+  .st-home-work-header {
+    padding: 20px 40px 10px 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #F3F3F3;
+    @include respond-below(md) {
+      display: block;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    .back-link {
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1;
+      color: #000;
+      margin-bottom: 18px;
+      @include transition();
+      svg {
+        margin-right: 27px;
+      }
+      &:hover {
+        text-decoration: none;
+        color: #004E6E;
+      }
+    }
+    .home-work-title {
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1;
+      margin: 0;
+      span {
+        margin-left: 6px;
+        color: #004E6E;
+      }
+    }
+    .info {
+      margin: 0;
+      padding-left: 33px;
+      font-size: 11px;
+      font-weight: 500;
+      line-height: 1;
+      span {
+        font-weight: 400;
+        color: #A5A5A5;
+        margin-right: 7px;
+      }
+    }
+    .do-later-link {
+      font-size: 11px;
+      padding-left: 7px;
+      color: #004E6E;
+      font-weight: 600;
+      text-decoration: underline;
+      @include transition();
+      &:hover {
+        color: #003d56;
+      }
+    }
+    .teacher-photo {
+      width: 50px;
+      @include border-radius(50%);
+      overflow: hidden;
+      margin: 0 auto 7px;
+    }
+    .teacher-name {
+      font-size: 11px;
+      font-weight: 500;
+      margin: 0;
+      color: #000;
+      @include transition();
+    }
+    .hom-work-teacher {
+      &:hover {
+        text-decoration: none;
+        .teacher-name {
+          color: #004E6E;
+
+        }
+      }
+    }
+  }
+  .st-question-body {
+    padding: 23px 36px 33px;
+    @include respond-below(md) {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+    .question-title {
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .question-name {
+        font-size: 12px;
+        line-height: 1;
+        margin-bottom: 0;
+      }
+      .question-number {
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1;
+        margin: 0;
+        span {
+          color: #004E6E;
+        }
+      }
+    }
+    .question {
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .answer-content {
+      display: inline-block;
+      cursor: pointer;
+      color: #004E6E;
+      font-size: 12px;
+      font-weight: 600;
+      vertical-align: middle;
+      margin: 0;
+      input{
+        display: none;
+      }
+      input:checked + .custom-answer-radio {
+        background: #004E6E;
+        .inner-circle {
+          display: block;
+        }
+      }
+      &.right-answer {
+        color: #1DBB57;
+        font-size: 14px;
+        &:after {
+          content: ' : The right answer ';
+          display: inline-block;
+        }
+      }
+    }
+    .custom-answer-radio {
+      width: 15px;
+      height: 15px;
+      display: inline-block;
+      @include border-radius(50%);
+      border: 2px solid #004E6E;
+      vertical-align: middle;
+      margin-right: 12px;
+      padding: 2px;
+      .inner-circle {
+        display: none;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        @include border-radius(50%);
+      }
+    }
+  }
+  .answers-list {
+    margin: 0;
+    li {
+      margin-bottom: 12px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

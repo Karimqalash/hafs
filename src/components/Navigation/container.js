@@ -3,6 +3,13 @@ import { connect } from 'react-redux';
 
 import { createOpenStudentLoginModel, createOpenStudentSignupModel } from './../../store/actionCreators/modals';
 
+function mapStateToProps(state) {
+	return {
+		isLoggedIn: state.login.isLoggedIn,
+		user: state.login.user,
+	};
+}
+
 // Transform dispatch to component function props
 function mapDispatchToProps(dispatch) {
 	return {
@@ -15,6 +22,6 @@ function mapDispatchToProps(dispatch) {
 
 // Export HOC
 export default connect(
-	null,
+	mapStateToProps,
 	mapDispatchToProps
 );

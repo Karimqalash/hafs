@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Nav, Navbar, Button, Form } from 'react-bootstrap';
+import { Nav, Navbar, Button, Form, Dropdown } from 'react-bootstrap';
 import LoginModal from '../modals/Login';
 import SignupModal from '../modals/Signup';
 
 const Component = props => {
     let listener = null;
-    const { openStudentLoginModal, openStudentSignupModal } = props;
+    const { isLoggedIn, user, openStudentLoginModal, openStudentSignupModal } = props;
     const [scrollState, setScrollState] = useState("top");
   
     useEffect(() => {
@@ -54,8 +54,25 @@ const Component = props => {
                         <Nav.Link className="nav__item" href="/contact-us" active={page=="contact-us"}>Contact Us</Nav.Link>
                     </Nav>
                     <div className="navbar-action">
-                        <button className="mr-3" onClick={openStudentLoginModal}>Login</button>
-                        <button className="" onClick={openStudentSignupModal}>Sign Up</button>
+                        {isLoggedIn ? (
+                            <Dropdown className="dropdown">
+                                <Dropdown.Toggle>
+                                    {user.name}
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu>
+                                    <Dropdown.Item href="/dashboard">My Dashboard</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-2">My Points</Dropdown.Item>
+                                    <Dropdown.Item href="#/action-3">Edit Profile</Dropdown.Item>
+                                    <Dropdown.Item className="logout" href="#/action-3">Log out</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
+                        ):(
+                            <>
+                                <button className="mr-3" onClick={openStudentLoginModal}>Login</button>
+                                <button className="" onClick={openStudentSignupModal}>Sign Up</button>
+                            </>
+                            )}
                     </div>
                 </Navbar.Collapse>
             </div>

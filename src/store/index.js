@@ -1,6 +1,8 @@
 // External dependencies
 import { createLogger } from 'redux-logger';
 import { createStore, applyMiddleware, compose } from 'redux';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
 // internal imports
 import rootReducer from './reducers';
@@ -41,11 +43,21 @@ export default function initStore() {
 
 	const initialState = undefined;
 
+	const persistConfig = {
+		key: 'root',
+		storage,
+
+	};
+
+	const persistedReducer = persistReducer(persistConfig, rootReducer);
+
 	const store = createStore(
-		rootReducer,
+		persistedReducer,
 		initialState,
 		composeEnhancers(applyMiddleware(...middleware))
 	);
 
-	return { store };
+	let persistor = persistStore(store);
+
+	return { store, persistor };
 }

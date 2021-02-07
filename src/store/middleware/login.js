@@ -2,7 +2,7 @@ import jwt from "jwt-decode";
 import history from './../../routes/history';
 import { LOGIN_ENDPOINT } from './config';
 import apiRequest from './apiRequest';
-import { createSubmitLoginError } from '../actionCreators/login';
+import { createIsLoggedInSuccess, createSubmitLoginError } from '../actionCreators/login';
 import { createCloseLoginModel } from '../actionCreators/modals';
 
 // Middleware
@@ -25,6 +25,10 @@ export default store => next => async action => {
 			const res = await response.json();
             localStorage.setItem('access_token', res.access_token);
             store.dispatch(createCloseLoginModel());
+            store.dispatch(createIsLoggedInSuccess({
+				isTeacher: true,
+				user: res.user,
+			}));
 			history.push('/dashboard');
         }
         else {

@@ -16,3 +16,10 @@ export function createResetLoginError () {
         type: 'RESET_LOGIN_ERROR'
     };
 }
+
+export function createIsLoggedInSuccess (payload) {
+    return {
+        type: 'IS_LOGGED_IN_SUCCESS',
+        payload
+    };
+}

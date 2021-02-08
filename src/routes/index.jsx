@@ -17,6 +17,7 @@ import Articles from './Articles';
 import Pricing from './Pricing';
 import Games from './Games';
 import FindTeacher from './FindTeacher';
+import SingleTeacher from './SingleTeacher';
 import Contactus from './Contactus';
 import history from './history';
 import StudentDashboard from "./StudentDashboard";
@@ -35,6 +36,7 @@ export default () => {
                 <Route path="/pricing" component={Pricing} />
                 <Route path="/games" component={Games} />
                 <Route path="/find-teacher" component={FindTeacher} />
+                <Route path="/teacher/:id" component={SingleTeacher} />
                 <Route path="/contact-us" component={Contactus} />
             </Switch>
         </Router>

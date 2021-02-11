@@ -82,7 +82,7 @@
   }
 }
 
-.recommended-students {
+.single-teacher {
   padding: 0 30px 30px;
   .st-item-card {
     background: #FFF;
@@ -164,93 +164,5 @@
         }
       }
     }
-  }
-}
-
-.booking-student-card {
-  display: flex;
-  align-items: center;
-  background: #BFE9FF;
-  margin-bottom: 1px;
-  padding: 13px 16px;
-  .st-avatar {
-    width: 60px;
-    height: 60px;
-    flex: 0 0 60px;
-    border-radius: 50%;
-    margin-right: 17px;
-  }
-  .st-booking-details {
-    color: #000;
-    font-size: 13px;
-    margin-bottom: 0;
-    width: 100%;
-    line-height: 24px;
-    span {
-      font-weight: 600;
-      color: $mainColor;
-    }
-  }
-}
-
-.upcoming-classes {
-  padding: 0 30px 20px;
-  .upc-st-box {
-    border: 1px solid #ECF9FF;
-    padding: 12px 20px 12px 30px;
-    box-shadow: 0 5px 10px rgba(#000, 0.1);
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    .upc-st-info {
-      display: flex;
-      align-items: center;
-      width: 100%;
-    }
-    .upc-actions {
-      white-space: nowrap;
-    }
-    .st-vector {
-      width: 45px;
-      height: 45px;
-      flex: 0 0 45px;
-      border-radius: 50%;
-      margin-right: 17px;
-    }
-    .upc-details {
-      & > h5 {
-        line-height: 1;
-      }
-      .st-name{
-        font-size: 13px;
-        font-weight: 600;
-        color: $mainColor;
-        text-decoration: none;
-        display: inline-block;
-        margin-bottom: 7px;
-      }
-      & > p {
-        margin-bottom: 0;
-        font-size: 11px;
-        font-weight: 500;
-        .sc-type {
-          font-weight: 600;
-          display: inline-block;
-          margin-right: 25px;
-        }
-        .cls-start {
-          color: #A5A5A5;
-          display: inline-block;
-          margin-right: 10px;
-        }
-        .cls-date {
-          font-size: 13px;
-          color: $light_green;
-          font-weight: 600;
-        }
-      }
-    }
-
   }
 }

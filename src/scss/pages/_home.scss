@@ -173,13 +173,6 @@
         margin-bottom: 30px;
     }
     &__card {
-        border: 1px solid #BFE9FF;
-        border-radius: 5px;
-        text-align: center;
-        padding: 1.5rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
 
         &--image {
             margin-right: 1rem;
@@ -229,14 +222,16 @@
 
             li {
                 border: 1px solid #0FCCC0;
-                border-radius: 14px;
+                border-radius: 20px;
                 text-align: left;
                 font: normal normal normal 12px/32px Poppins;
                 letter-spacing: 0px;
                 color: #6FCBC6;
                 display: inline-block;
-                padding: 0 0.5rem;
+                padding: 3px 10px;
                 margin: 5px;
+                line-height: 1.5;
+                white-space: nowrap;
             }
         }
     }

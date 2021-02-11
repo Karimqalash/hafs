@@ -132,6 +132,17 @@
             color: #FFF;
         }
     }
+    &.main-btn-light {
+        border-radius: 5px;
+        background: #ECF9FF;
+        color: $mainColor;
+        padding: 12px 30px;
+        border: 1px solid transparent;
+        &:hover {
+            background: $mainColor;
+            color: #FFF;
+        }
+    }
     &.border-btn-primary {
         border-radius: 5px;
         background: none;

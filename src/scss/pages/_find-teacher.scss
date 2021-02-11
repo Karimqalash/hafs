@@ -38,17 +38,355 @@
         }
     }
 
-    &__teachers {
-        padding: 1rem;
+
+    &__results {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border-radius: 8px;
     }    
 
-    .team__card {
-        flex-wrap: unset;
-        text-align: left;
-        margin-bottom: 1rem;
-        border: 1px solid #ECF9FF;
+
+    &__teachers {
+        padding: 1rem;
+        //background: #FFFFFF 0% 0% no-repeat padding-box;
     }
 
+    .team__card {
+        .teacher-short-info {
+            border-radius: 5px;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: unset;
+            text-align: left;
+            margin-bottom: 1rem;
+            border: 1px solid #ECF9FF;
+            transition: all 0.25s ease-in-out;
+            &:hover {
+                background: #ECF9FF;
+            }
+        }
+        .teacher-all-info {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #EEE;
+            display: none;
+        }
+        .teacher-all-info-content {
+            padding: 20px;
+            flex-wrap: unset;
+            text-align: left;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #F3F3F3;
+            @include respond-below(sm) {
+                padding: 10px;
+
+            }
+            .header-action-btn {
+                @include respond-below(lg) {
+                    margin-top: 20px;
+                }
+            }
+            &:last-child{
+                border-bottom: 0 !important;
+            }
+            .teacher-all-info-header {
+                margin-bottom: 10px;
+            }
+            .hour-price {
+                margin-bottom: 10px;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 1;
+                span {
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .price {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: #004E6E;
+                    margin-left: 10px;
+                }
+            }
+            .team__card--description {
+                margin-bottom: 35px;
+            }
+            .feedback-header {
+                label {
+                    margin: 0;
+                    font-size: 10px;
+                    font-weight: 500;
+                    margin-right: 24px;
+                    white-space: nowrap;
+                    display: block;
+                }
+                .feedback-select {
+                    border: 0;
+                    padding: 15px 30px;
+                    padding-left: 0;
+                    border-bottom: 1px solid #dfdfdf;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            .feedback-body {
+                padding: 20px 0;
+                border-bottom: 1px solid #F3F3F3;
+                @include respond-below(lg) {
+                    display: block !important;
+                }
+                &:last-child{
+                    padding-bottom: 0;
+                    border-bottom: 0;
+                }
+            }
+            .feedback-list {
+                margin: 0;
+                li {
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                    .list-title {
+                        font-weight: bold;
+                        margin-right: 7px;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .stars-rating-list {
+                margin: 0;
+                @include respond-below(lg) {
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                li {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        &.active {
+            .teacher-short-info {
+                display: none;
+            }
+            .teacher-all-info {
+                display: block;
+            }
+        }
+    }
+    .find-teacher__content {
+        display: flex;
+        @include respond-below(lg) {
+            display: block;
+        }
+        .find-teacher__sidebar {
+            flex: 0 0 260px;
+            margin-right: 15px;
+            height: fit-content;
+            @include respond-below(lg) {
+                margin-bottom: 30px;
+                margin-right: 0;
+            }
+        }
+        .find-teacher__results {
+            flex: 0 0 calc(100% - 275px);
+        }
+    }
+}
+.login-warning-box {
+    background: #FF9900;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 8px 8px 0 0;
+    font-size: 10px;
+    font-weight: 500;
+    font-style: italic;
+    color: #2D1E07;
+    a {
+        color: #fff;
+        font-weight: 700;
+        font-style: initial;
+        text-decoration: underline;
+        font-size: 9px;
+    }
+}
+
+
+
+
+
+
+
+.recommended-students {
+    padding: 0 30px 30px;
+    .st-item-card {
+        background: #FFF;
+        border: 1px solid #BFE9FF;
+        border-radius: 5px;
+        padding: 15px 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 5px 15px #BFE9FF;
+        .st-card-head {
+            display: flex;
+            justify-content: space-between;
+        }
+        .st-info {
+            display: flex;
+            .st-name {
+                font-size: 13px;
+                font-weight: 600;
+                text-decoration: none;
+                color: $mainColor;
+                margin-bottom: 3px;
+                display: inline-block;
+            }
+            .st-gender {
+                font-size: 13px;
+                color: #000;
+                font-style: italic;
+                line-height: 1;
+                font-weight: 500;
+            }
+        }
+        .st-avatar-box {
+            width: 60px;
+            height: 60px;
+            flex: 0 0 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            img {
+                width: 100%;
+            }
+        }
+        .st-wants {
+            display: flex;
+            align-items: center;
+            margin: 20px 0 15px;
+            & > p {
+                font-size: 13px;
+                font-weight: 500;
+                color: $mainColor;
+                margin: 0 15px 0 0;
+                white-space: nowrap;
+            }
+            ul {
+                margin: 0;
+                .ct-name {
+                    padding: 3px 10px;
+                    display: inline-block;
+                    border: 1px solid #0FCCC0;
+                    background: rgba(#0FCCC0, 0.15);
+                    color: $mainColor;
+                    border-radius: 15px;
+                    font-size: 12px;
+                    font-weight: 500;
+                }
+            }
+        }
+        .st-info-list {
+            margin-bottom: 0;
+            li {
+                width: 100%;
+            }
+            span {
+                font-size: 12px;
+                font-weight: 600;
+                color: #000;
+                &:first-child {
+                    color: $mainColor;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+.booking-student-card {
+    display: flex;
+    align-items: center;
+    background: #BFE9FF;
+    margin-bottom: 1px;
+    padding: 13px 16px;
+    .st-avatar {
+        width: 60px;
+        height: 60px;
+        flex: 0 0 60px;
+        border-radius: 50%;
+        margin-right: 17px;
+    }
+    .st-booking-details {
+        color: #000;
+        font-size: 13px;
+        margin-bottom: 0;
+        width: 100%;
+        line-height: 24px;
+        span {
+            font-weight: 600;
+            color: $mainColor;
+        }
+    }
+}
+
+.upcoming-classes {
+    padding: 0 30px 20px;
+    .upc-st-box {
+        border: 1px solid #ECF9FF;
+        padding: 12px 20px 12px 30px;
+        box-shadow: 0 5px 10px rgba(#000, 0.1);
+        border-radius: 8px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .upc-st-info {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .upc-actions {
+            white-space: nowrap;
+        }
+        .st-vector {
+            width: 45px;
+            height: 45px;
+            flex: 0 0 45px;
+            border-radius: 50%;
+            margin-right: 17px;
+        }
+        .upc-details {
+            & > h5 {
+                line-height: 1;
+            }
+            .st-name{
+                font-size: 13px;
+                font-weight: 600;
+                color: $mainColor;
+                text-decoration: none;
+                display: inline-block;
+                margin-bottom: 7px;
+            }
+            & > p {
+                margin-bottom: 0;
+                font-size: 11px;
+                font-weight: 500;
+                .sc-type {
+                    font-weight: 600;
+                    display: inline-block;
+                    margin-right: 25px;
+                }
+                .cls-start {
+                    color: #A5A5A5;
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+                .cls-date {
+                    font-size: 13px;
+                    color: $light_green;
+                    font-weight: 600;
+                }
+            }
+        }
+
+    }
 }

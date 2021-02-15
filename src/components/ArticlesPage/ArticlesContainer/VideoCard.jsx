@@ -5,7 +5,7 @@ const VideoCard = () => (
         <iframe 
             width="100%" 
             height="100%" 
-            src="https://www.youtube.com/embed/guCwdHngTmM"
+            src="https://www.youtube.com/embed/JF-Fahu9d_w"
             frameBorder="0"
             loading="lazy" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 

@@ -135,13 +135,13 @@ const HomeContent = () => {
             <div className="team__container">
                 <div className="row">
                     <div className="col-lg-4">
-                        <TeamCard />
+                        <TeamCard homepage />
                     </div>
                     <div className="col-lg-4">
-                        <TeamCard />
+                        <TeamCard homepage />
                     </div>
                     <div className="col-lg-4">
-                        <TeamCard />
+                        <TeamCard homepage />
                     </div>
                 </div>
             </div>

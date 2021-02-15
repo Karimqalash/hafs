@@ -213,7 +213,16 @@
 }
 
 
-
+.teacher-short-info {
+    border-radius: 5px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ECF9FF;
+    transition: all 0.25s ease-in-out;
+    &:hover {
+        background: #ECF9FF;
+    }
+}
 
 
 
